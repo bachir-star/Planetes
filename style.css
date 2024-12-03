@@ -1,0 +1,96 @@
+/* Sur tout fichier CSS on n'oublie pas de ré-initialiser les marges par défaut */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Applique une couleur d'arrière plan unie au container du menu */
+header .menu-container {
+    background-color: #1B2430;
+}
+
+/* Cible la sous-div afin de limiter sa largeur à 1200px */
+header .menu-container div {
+    max-width: 1200px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+}
+
+/* Aligne les éléments de liste (li) sur la même ligne et supprime leur puce */
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+/* 
+    Cible les liens (onglets du menu). 
+    C'est le padding spécifié sur ces liens qui défini la hauteur du menu.
+    /!\ NE JAMAIS DEFINIR DE HAUTEUR FIXE SUR UN MENU :) 
+*/
+header nav a {
+    padding: 41px 16px;
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+/* Cible le premier li du menu afin d'appliquer des styles sur son enfant direct (lien hypertexte) */
+header nav li:first-of-type a {
+    text-decoration: underline 2px;
+    text-underline-offset: 8px;
+}
+
+/* 
+    Cible toutes les images du header (logo compris)
+*/
+header img {
+    width: 100%;
+}
+
+/* 
+    Cible spécifiquement le logo (et lui applique une hauteur et largeur fixe car - de 150px)
+    Ce sélecteur dispose d'une spécificité supérieure à "header img" (ligne 49)
+    De ce fait, la propriété WIDTH est écrasée et remplacée par celle définie ligne 60.
+*/
+header div img {
+    height: 50px;
+    width: 75px;
+}
+
+main div{
+    display: flex;
+}
+
+.planet{
+    max-width: 1200px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.planet img{
+    width: 300px;
+    height: 284px;
+    margin-right: 130px;
+
+}
+
+.tel{
+    background-color: #D6D5A8 ;
+    border-radius: 10px;
+    padding: 7px 12px;
+}
+
+.alt{
+    background-color: #1B2430 ;
+    border-radius: 10px;
+    padding: 7px 12px;
+    color: white;
+}
+
+main{
+    max-width: 800px;
+    margin: auto;
+}
